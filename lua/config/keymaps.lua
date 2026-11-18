@@ -238,48 +238,36 @@ vim.keymap.set("n", "<leader>fO", function()
 end, { desc = "Finder: Reveal file" })
 
 
--- @调试模式下快捷键设置-- F5：启动调试 / 继续运行
--- vim.keymap.set("n", "<F5>", function()
---   require("dap").continue()
--- end, { noremap = true, silent = true, desc = "DAP: 启动/继续调试" })
---
--- -- Ctrl+F5：直接运行（不进调试，不触发断点）
--- vim.keymap.set("n", "<C-F5>", function()
---   require("dap").run_last({ noDebug = true })
--- end, { noremap = true, silent = true, desc = "DAP: 直接运行(无调试)" })
---
--- -- Shift+F5：停止调试，终止会话
--- vim.keymap.set("n", "<S-F5>", function()
---   require("dap").terminate()
--- end, { noremap = true, silent = true, desc = "DAP: 终止调试" })
---
--- -- Ctrl+Shift+F5：重启调试
--- vim.keymap.set("n", "<C-S-F5>", function()
---   require("dap").restart()
--- end, { noremap = true, silent = true, desc = "DAP: 重启调试" })
---
--- -- F9：切换普通断点
--- vim.keymap.set("n", "<F9>", function()
---   require("dap").toggle_breakpoint()
--- end, { noremap = true, silent = true, desc = "DAP: 切换断点" })
---
--- -- Shift+F9：内联断点（同一行多语句精准打断点）
--- vim.keymap.set("n", "<S-F9>", function()
---   require("dap").toggle_breakpoint(nil, nil, nil, { inline = true })
--- end, { noremap = true, silent = true, desc = "DAP: 内联断点" })
---
--- -- F10：单步步过 Step Over
--- vim.keymap.set("n", "<F10>", function()
---   require("dap").step_over()
--- end, { noremap = true, silent = true, desc = "DAP: 步过 Step Over" })
---
--- -- F11：单步进入 Step Into
--- vim.keymap.set("n", "<F11>", function()
---   require("dap").step_into()
--- end, { noremap = true, silent = true, desc = "DAP: 步入 Step Into" })
---
--- -- Shift+F11：单步跳出 Step Out
--- vim.keymap.set("n", "<S-F11>", function()
---   require("dap").step_out()
--- end, { noremap = true, silent = true, desc = "DAP: 步出 Step Out" })
+-- @调试模式下快捷键设置-- F5：启动调试 / 继续运行
+-- F5：启动调试 / 继续运行
+vim.keymap.set("n", "<F5>", function()
+  require("dap").continue()
+end, { noremap = true, silent = true, desc = "DAP: 启动/继续调试" })
+
+-- Shift+F5：停止调试，终止会话 在neovide下本身按键
+vim.keymap.set("n", "<S-F5>", function()
+-- vim.keymap.set("n", "<F17>", function()
+  require("dap").terminate()
+end, { noremap = true, silent = true, desc = "DAP: 终止调试" })
+
+-- F9：切换普通断点
+vim.keymap.set("n", "<F9>", function()
+  require("dap").toggle_breakpoint()
+end, { noremap = true, silent = true, desc = "DAP: 切换断点" })
+
+-- F10：单步步过 Step Over
+vim.keymap.set("n", "<F10>", function()
+  require("dap").step_over()
+end, { noremap = true, silent = true, desc = "DAP: 步过 Step Over" })
+
+-- F11：单步进入 Step Into
+vim.keymap.set("n", "<F11>", function()
+  require("dap").step_into()
+end, { noremap = true, silent = true, desc = "DAP: 步入 Step Into" })
+
+-- Shift+F11：单步跳出 Step Out 在neovide下本身按键
+vim.keymap.set("n", "<S-F11>", function()
+-- vim.keymap.set("n", "<F23>", function()
+  require("dap").step_out()
+end, { noremap = true, silent = true, desc = "DAP: 步出 Step Out" })
 -- @!调试模式下快捷键设置

@@ -5,7 +5,7 @@ return {
 
         -- ========= 断点标志 =========
         vim.fn.sign_define("DapBreakpoint", {
-        text = "●",
+        text = "◉",
         texthl = "DapBreakpoint",
         linehl = "",
         numhl = "",
@@ -15,7 +15,7 @@ return {
         texthl = "DapBreakpointCondition",
         })
         vim.fn.sign_define("DapStopped", {
-        text = "▶",
+        text = "▷",
         texthl = "DapStopped",
         linehl = "DapStoppedLine",
         })

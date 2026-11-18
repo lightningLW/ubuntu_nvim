@@ -95,7 +95,7 @@ vim.o.guifont = "JetBrainsMonoNL Nerd Font:h12:medium:normal"
 -- -- 窗口透明度 (0.0 完全透明, 1.0 完全不透明)
 vim.g.neovide_opacity = 1.0
 --初始化字体大小缩放因子
-vim.g.neovide_scale_factor = 1.3
+vim.g.neovide_scale_factor = 1.0
 
 -- 设置neovide ------------------------------------------------------------------.end
 
